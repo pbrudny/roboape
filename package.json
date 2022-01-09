@@ -4,9 +4,10 @@
   "description": "Ape of the Future",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "webpack --watch --progress",
-    "build": "webpack --mode production --no-watch"
+    "build": "webpack --mode production --no-watch",
+    "migrate": "node ./bin/migrate.js"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.20.13",
+    "jest": "^27.4.7",
     "null-loader": "^4.0.1"
   }
 }
