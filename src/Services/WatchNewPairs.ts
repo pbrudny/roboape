@@ -63,7 +63,7 @@ export default class WatchNewPairs {
         const reserve = await this.web3Helper.getReserve(values.pair);
         const bnbReserve = values.token0 === Symbols.wbnb ? reserve.reserve0 : reserve.reserve1;
 
-        this.logger.log(`New pair created: ${values.pair}. BNB reserve: ${fromWei(bnbReserve.toFixed())}.`);
+        this.logger.log(`New pair created: https://bscscan.com/address/${values.pair}. BNB reserve: ${fromWei(bnbReserve.toFixed())}.`);
 
         if (bnbReserve.lte(this.minReserve)) {
             return;

@@ -155,7 +155,7 @@ export default class Web3Helper {
             this.web3.eth.sendSignedTransaction(signedTx.rawTransaction)
                 .on('transactionHash', (hash: string) => {
                     txnSubmitted = true;
-                    this.logger.log(`Txn Hash ${hash} (${fromWei(gasPrice, 'gwei')}gwei) (nonce: ${tx.nonce ? Number(tx.nonce) : '-'})`);
+                    this.logger.log(`Txn Hash https://bscscan.com/tx/${hash} (${fromWei(gasPrice, 'gwei')}gwei) (nonce: ${tx.nonce ? Number(tx.nonce) : '-'})`);
                 })
                 .on('receipt', (receipt) => {
                     resolve(receipt);
